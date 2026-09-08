@@ -7,10 +7,12 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import { siteUrl } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Charlie | Personal Portfolio",
   description: "Charlie is a full-stack developer with 6 years of experience.",
 };
