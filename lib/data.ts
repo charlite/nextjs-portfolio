@@ -279,7 +279,7 @@ export const projectsData = [
     tags: ["Cloudflare", "Hono", "React", "TypeScript"],
     imageUrl: dropafileImg,
     screenshotUrl: dropafileScreenshot,
-    url: "https://dropafile.app-org-es.workers.dev/",
+    url: "https://dropafile.xarlizard.workers.dev/",
     githubUrl: "https://github.com/dropafile/dropafile",
     accent: "from-orange-400/30 via-amber-500/20 to-yellow-400/20",
     glow: "group-hover:shadow-orange-500/20",
@@ -334,7 +334,7 @@ export const skillsData = [
 ] as const;
 
 export const hostingProviders = [
-  { name: "Cloudflare", logo: "/images/logo_cloudflare.png", link: "https://portfolio.app-org-es.workers.dev/" },
+  { name: "Cloudflare", logo: "/images/logo_cloudflare.png", link: "https://portfolio.xarlizard.workers.dev/" },
   { name: "Netlify", logo: "/images/logo_netlify.png", link: "https://europass.netlify.app/" },
   { name: "Github", logo: "/images/logo_github.png", link: "https://github.com/Xarlizard/xarlizard/tree/gh-pages" },
 ] as const;
