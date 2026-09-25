@@ -15,21 +15,18 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        I build products end-to-end: from{" "}
-        <span className="font-medium">UI architecture and design systems</span>{" "}
-        to <span className="font-medium">APIs, infra, and production deployments</span>.
-        I've led frontend teams as{" "}
-        <span className="font-medium">Frontend Lead</span>, owned features as a{" "}
-        <span className="font-medium">Product Engineer</span>, and shipped across{" "}
-        <span className="font-medium">web, mobile, and cloud</span>. Nowadays I'm
-        growing into a{" "}
-        <span className="font-medium">native AI developer</span>, building
-        intelligent systems that reach real users.
+        Software Engineer with over{" "}
+        <span className="font-medium">9 years of experience</span> building and
+        maintaining modern web and mobile applications across{" "}
+        <span className="font-medium">fintech, e-commerce, and SaaS</span>.
+        Skilled in React, Next.js, Node.js, Python, Java, SwiftUI, and RESTful
+        APIs, with solid expertise in server-side rendering, WebSockets, and
+        accessibility best practices.
       </p>
       <p>
-        <span className="italic">What I bring:</span> strong product sense ·
-        scalable React/TypeScript frontends · full-stack ownership · AI-native
-        tooling
+        <span className="italic">What I bring:</span> hands-on technical depth ·
+        business-oriented problem solving · clean code & UI/UX · AI-native
+        product engineering
       </p>
     </motion.section>
   );

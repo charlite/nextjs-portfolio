@@ -14,7 +14,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Charlie | Personal Portfolio",
-  description: "Charlie is a full-stack developer with 6 years of experience.",
+  description:
+    "Charlie is a full-stack software engineer with 9+ years of experience across fintech, e-commerce, and SaaS.",
 };
 
 export default function RootLayout({
