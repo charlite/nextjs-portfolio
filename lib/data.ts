@@ -19,9 +19,9 @@ export const dropafileImg =
 export const dropafileScreenshot =
   "https://raw.githubusercontent.com/dropafile/dropafile/main/.github/screenshot.png";
 export const emailSignatureEditorImg =
-  "https://raw.githubusercontent.com/xarlizard/email-signature-editor/main/.github/icon-cropped.png";
+  "https://raw.githubusercontent.com/charlite/email-signature-editor/main/.github/icon-cropped.png";
 export const emailSignatureEditorScreenshot =
-  "https://raw.githubusercontent.com/xarlizard/email-signature-editor/main/.github/screenshot.png";
+  "https://raw.githubusercontent.com/charlite/email-signature-editor/main/.github/screenshot.png";
 export const lizardUiImg =
   "https://raw.githubusercontent.com/lizard-ui/lizard-ui/main/.github/icon-cropped.png";
 export const lizardUiScreenshot =
@@ -216,7 +216,7 @@ export const projectsData = [
     tags: ["Cloudflare", "Hono", "React", "TypeScript"],
     imageUrl: dropafileImg,
     screenshotUrl: dropafileScreenshot,
-    url: "https://dropafile.xarlizard.workers.dev/",
+    url: "https://dropafile.charlite.workers.dev/",
     githubUrl: "https://github.com/dropafile/dropafile",
     accent: "from-orange-400/30 via-amber-500/20 to-yellow-400/20",
     glow: "group-hover:shadow-orange-500/20",
@@ -229,7 +229,7 @@ export const projectsData = [
     imageUrl: emailSignatureEditorImg,
     screenshotUrl: emailSignatureEditorScreenshot,
     url: "https://email-signature-editor.pages.dev/",
-    githubUrl: "https://github.com/xarlizard/email-signature-editor",
+    githubUrl: "https://github.com/charlite/email-signature-editor",
     accent: "from-violet-400/30 via-indigo-500/20 to-sky-400/20",
     glow: "group-hover:shadow-violet-500/20",
   },
@@ -271,9 +271,9 @@ export const skillsData = [
 ] as const;
 
 export const hostingProviders = [
-  { name: "Cloudflare", logo: "/images/logo_cloudflare.png", link: "https://portfolio.xarlizard.workers.dev/" },
+  { name: "Cloudflare", logo: "/images/logo_cloudflare.png", link: "https://charlie.icu/" },
   { name: "Netlify", logo: "/images/logo_netlify.png", link: "https://europass.netlify.app/" },
-  { name: "Github", logo: "/images/logo_github.png", link: "https://github.com/Xarlizard/xarlizard/tree/gh-pages" },
+  { name: "Github", logo: "/images/logo_github.png", link: "https://github.com/charlite/nextjs-portfolio" },
 ] as const;
 
 export const certificatesData = [

@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site for [Charlie Rios](https://github.com/xarlizard) — Senior Full-Stack Software Engineer based in Amsterdam.
+Personal portfolio site for [Charlie Rios](https://github.com/charlite) — Software Engineer based in Amsterdam.
 
 Live at **[charlie.icu](https://charlie.icu)**.
 
@@ -97,7 +97,7 @@ public/        # Static assets (images, CV)
 
 ## Author
 
-**Charlie Rios** ([@xarlizard](https://github.com/xarlizard))
+**Charlie Rios** ([@charlite](https://github.com/charlite))
 
 ## License
 

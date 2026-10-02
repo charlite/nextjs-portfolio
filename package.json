@@ -5,12 +5,12 @@
   "type": "module",
   "author": {
     "name": "Charlie Rios",
-    "url": "https://github.com/xarlizard"
+    "url": "https://github.com/charlite"
   },
   "homepage": "https://charlie.icu",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xarlizard/nextjs-portfolio.git"
+    "url": "https://github.com/charlite/nextjs-portfolio.git"
   },
   "packageManager": "bun@1.3.14",
   "engines": {
