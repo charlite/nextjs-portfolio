@@ -3,17 +3,17 @@ import { FaNodeJs, FaReact } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 
 export const tokenBarImg =
-  "https://raw.githubusercontent.com/token-bar/token-bar/main/.github/icon-cropped.png";
+  "https://raw.githubusercontent.com/token-bar/.github/main/.github/icon-cropped.png";
 export const tokenBarScreenshot =
-  "https://raw.githubusercontent.com/token-bar/token-bar/main/.github/screenshot.png";
+  "https://raw.githubusercontent.com/token-bar/.github/main/.github/screenshot.png";
 export const cookGptImg =
-  "https://raw.githubusercontent.com/cook-gpt/cook-gpt/main/.github/icon-cropped.png";
+  "https://raw.githubusercontent.com/cook-gpt/.github/main/.github/icon-cropped.png";
 export const cookGptScreenshot =
-  "https://raw.githubusercontent.com/cook-gpt/cook-gpt/main/.github/screenshot.png";
+  "https://raw.githubusercontent.com/cook-gpt/.github/main/.github/screenshot.png";
 export const pocketAgentImg =
-  "https://raw.githubusercontent.com/pocket-agent/pocket-agent/main/.github/icon-cropped.png";
+  "https://raw.githubusercontent.com/pocket-agent/.github/main/.github/icon-cropped.png";
 export const pocketAgentScreenshot =
-  "https://raw.githubusercontent.com/pocket-agent/pocket-agent/main/.github/screenshot.png";
+  "https://raw.githubusercontent.com/pocket-agent/.github/main/.github/screenshot.png";
 export const dropafileImg =
   "https://raw.githubusercontent.com/dropafile/dropafile/main/.github/icon-cropped.png";
 export const dropafileScreenshot =
@@ -181,7 +181,8 @@ export const projectsData = [
     imageUrl: cookGptImg,
     screenshotUrl: cookGptScreenshot,
     url: "https://cook-gpt.pages.dev/",
-    githubUrl: "https://github.com/cook-gpt/cook-gpt",
+    appStoreUrl: "https://apps.apple.com/app/id6805535867",
+    githubUrl: "https://github.com/cook-gpt",
     accent: "from-red-400/30 via-orange-500/20 to-amber-400/20",
     glow: "group-hover:shadow-red-500/20",
   },
@@ -193,18 +194,21 @@ export const projectsData = [
     imageUrl: tokenBarImg,
     screenshotUrl: tokenBarScreenshot,
     url: "https://token-bar.pages.dev/",
-    githubUrl: "https://github.com/token-bar/token-bar",
+    appStoreUrl: "https://apps.apple.com/app/id6805913901",
+    githubUrl: "https://github.com/token-bar",
     accent: "from-amber-400/30 via-orange-500/20 to-rose-400/20",
     glow: "group-hover:shadow-amber-500/20",
   },
   {
     title: "Pocket Agent",
     description:
-      "Open-source local AI assistant ecosystem — Python Pocket Node runs LLM routing, tools, memory, and Telegram on your machine; a macOS desktop app bundles the stack; a Cloudflare Worker API and React web UI handle chat, monitor, and settings.",
-    tags: ["Python", "Cloudflare", "React", "macOS"],
+      "Offline-first PocketAgent monorepo: an iOS client for chat UI and Mac node pairing, plus a macOS agent node host (Telegram, roles, tools) with a shared marketing site and OKF specs. Same bundle ID across iPhone, iPad, and Mac targets.",
+    tags: ["Swift", "iOS", "macOS", "SwiftUI"],
     imageUrl: pocketAgentImg,
     screenshotUrl: pocketAgentScreenshot,
     url: "https://pocket-agent.pages.dev/",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/pocketagent-chatbot/id6816867795",
     githubUrl: "https://github.com/pocket-agent",
     accent: "from-sky-400/30 via-blue-500/20 to-indigo-400/20",
     glow: "group-hover:shadow-sky-500/20",
@@ -248,26 +252,45 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
+  "AI",
+  "Astro",
+  "AWS",
   "CSS",
+  "Cloudflare Workers",
+  "Ethers.js",
+  "Express",
+  "FastAPI",
+  "Framer Motion",
+  "Git",
+  "GraphQL",
+  "Hono",
+  "HTML",
+  "Java",
   "JavaScript",
-  "TypeScript",
-  "React",
+  "MongoDB",
   "Next.js",
   "Node.js",
-  "Git",
-  "Tailwind",
+  "OCI",
+  "PHP",
   "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Astro",
-  "Express",
-  "tRPC",
   "Python",
-  "Shadcdn",
-  "Framer Motion",
-  "Swift"
+  "React",
+  "React Native",
+  "React Router v7",
+  "Redux",
+  "RSC",
+  "SQL",
+  "Shadcn UI",
+  "Supabase",
+  "Swift",
+  "Tailwind",
+  "TanStack Query",
+  "TypeScript",
+  "tRPC",
+  "Vercel",
+  "Vite",
+  "WCAG 2.2",
+  "WebSockets",
 ] as const;
 
 export const hostingProviders = [

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { FaGithub } from "react-icons/fa";
+import { FaApple, FaGithub } from "react-icons/fa";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { projectsData } from "@/lib/data";
 
@@ -13,6 +13,7 @@ type ProjectProps = (typeof projectsData)[number] & {
   isFocused?: boolean;
   onHoverStart?: () => void;
   onHoverEnd?: () => void;
+  appStoreUrl?: string;
 };
 
 export default function Project({
@@ -22,6 +23,7 @@ export default function Project({
   imageUrl,
   screenshotUrl,
   url,
+  appStoreUrl,
   githubUrl,
   accent,
   glow,
@@ -151,9 +153,20 @@ export default function Project({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition hover:scale-[1.03] hover:bg-gray-950 active:scale-[0.98] dark:bg-white dark:text-gray-900 dark:hover:bg-white/90"
               >
-                Live demo
+                Website
                 <HiArrowUpRight className="h-4 w-4" />
               </a>
+              {appStoreUrl ? (
+                <a
+                  href={appStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/80 px-5 py-2.5 text-sm font-medium text-gray-800 transition hover:scale-[1.03] hover:bg-white active:scale-[0.98] dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15"
+                >
+                  <FaApple className="h-4 w-4" />
+                  App Store
+                </a>
+              ) : null}
               <a
                 href={githubUrl}
                 target="_blank"
