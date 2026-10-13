@@ -10,15 +10,20 @@ export function getTheme(): Theme {
   return sessionOverride ?? getSystemTheme();
 }
 
+export function applyTheme(theme: Theme) {
+  document.documentElement.classList.toggle("dark", theme === "dark");
+}
+
+/** Keep Tailwind `dark:` in sync with `getTheme()` (React hydration clears script-set classes on `<html>`). */
+export function syncThemeToDocument() {
+  applyTheme(getTheme());
+}
+
 /** In-session only; never persisted. Cleared on full page load. */
 export function setSessionTheme(theme: Theme) {
   sessionOverride = theme;
-  applyTheme(theme);
+  syncThemeToDocument();
   notifyThemeChange();
-}
-
-export function applyTheme(theme: Theme) {
-  document.documentElement.classList.toggle("dark", theme === "dark");
 }
 
 const listeners = new Set<() => void>();
@@ -28,12 +33,13 @@ function notifyListeners() {
 }
 
 export function subscribeTheme(listener: () => void) {
+  syncThemeToDocument();
   listeners.add(listener);
 
   const media = window.matchMedia("(prefers-color-scheme: dark)");
   const onSystemThemeChange = () => {
     if (sessionOverride !== null) return;
-    applyTheme(getSystemTheme());
+    syncThemeToDocument();
     notifyListeners();
   };
 

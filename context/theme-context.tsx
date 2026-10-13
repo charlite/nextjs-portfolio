@@ -1,10 +1,16 @@
 "use client";
 
-import React, { createContext, useContext, useSyncExternalStore } from "react";
+import React, {
+  createContext,
+  useContext,
+  useLayoutEffect,
+  useSyncExternalStore,
+} from "react";
 import {
   getTheme,
   setSessionTheme,
   subscribeTheme,
+  syncThemeToDocument,
   type Theme,
 } from "@/lib/theme";
 
@@ -27,6 +33,10 @@ export default function ThemeContextProvider({
     getTheme,
     (): Theme => "light"
   );
+
+  useLayoutEffect(() => {
+    syncThemeToDocument();
+  }, []);
 
   const toggleTheme = () => {
     setSessionTheme(theme === "light" ? "dark" : "light");
