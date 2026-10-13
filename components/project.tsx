@@ -1,11 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import { FaApple, FaGithub } from "react-icons/fa";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { projectsData } from "@/lib/data";
+import { projectScreenshotUrl } from "@/lib/utils";
+import { useTheme } from "@/context/theme-context";
 
 type ProjectProps = (typeof projectsData)[number] & {
   index: number;
@@ -33,6 +36,19 @@ export default function Project({
   onHoverStart,
   onHoverEnd,
 }: ProjectProps) {
+  const { theme } = useTheme();
+  const [darkScreenshotMissing, setDarkScreenshotMissing] = useState(false);
+
+  useEffect(() => {
+    setDarkScreenshotMissing(false);
+  }, [theme, screenshotUrl]);
+
+  const displayScreenshotUrl = projectScreenshotUrl(
+    screenshotUrl,
+    theme,
+    darkScreenshotMissing
+  );
+
   const focusShadow = glow.replace("group-hover:", "");
 
   return (
@@ -69,11 +85,16 @@ export default function Project({
             }`}
           >
             <Image
-              src={screenshotUrl}
+              src={displayScreenshotUrl}
               alt={`${title} screenshot`}
               fill
               quality={95}
               sizes={featured ? "(max-width: 1024px) 100vw, 420px" : "320px"}
+              onError={() => {
+                if (theme === "dark" && !darkScreenshotMissing) {
+                  setDarkScreenshotMissing(true);
+                }
+              }}
               className={clsx(
                 "object-cover object-top transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-100",
                 isFocused ? "opacity-100 scale-100" : "opacity-0 scale-[1.03]"
