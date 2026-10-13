@@ -5,6 +5,7 @@ import {
   applyTheme,
   notifyThemeChange,
   readThemeFromDocument,
+  setStoredPreference,
   subscribeTheme,
   type Theme,
 } from "@/lib/theme";
@@ -31,11 +32,7 @@ export default function ThemeContextProvider({
 
   const toggleTheme = () => {
     const next: Theme = theme === "light" ? "dark" : "light";
-    try {
-      window.localStorage.setItem("theme", next);
-    } catch {
-      /* ignore */
-    }
+    setStoredPreference(next);
     applyTheme(next);
     notifyThemeChange();
   };
