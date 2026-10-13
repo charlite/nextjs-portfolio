@@ -1,33 +1,24 @@
 export type Theme = "light" | "dark";
-export type ThemePreference = "system" | Theme;
 
-const STORAGE_KEY = "color-scheme";
+let sessionOverride: Theme | null = null;
 
-export function getStoredPreference(): ThemePreference {
-  try {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === "system" || stored === "light" || stored === "dark") {
-      return stored;
-    }
-  } catch {
-    /* private mode / blocked storage */
-  }
-  return "system";
+export function getSystemTheme(): Theme {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
-export function resolveTheme(preference: ThemePreference = getStoredPreference()): Theme {
-  if (preference === "system") {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
-  return preference;
+export function getTheme(): Theme {
+  return sessionOverride ?? getSystemTheme();
+}
+
+/** In-session only; never persisted. Cleared on full page load. */
+export function setSessionTheme(theme: Theme) {
+  sessionOverride = theme;
+  applyTheme(theme);
+  notifyThemeChange();
 }
 
 export function applyTheme(theme: Theme) {
   document.documentElement.classList.toggle("dark", theme === "dark");
-}
-
-export function readThemeFromDocument(): Theme {
-  return document.documentElement.classList.contains("dark") ? "dark" : "light";
 }
 
 const listeners = new Set<() => void>();
@@ -41,8 +32,8 @@ export function subscribeTheme(listener: () => void) {
 
   const media = window.matchMedia("(prefers-color-scheme: dark)");
   const onSystemThemeChange = () => {
-    if (getStoredPreference() !== "system") return;
-    applyTheme(resolveTheme("system"));
+    if (sessionOverride !== null) return;
+    applyTheme(getSystemTheme());
     notifyListeners();
   };
 
@@ -58,17 +49,5 @@ export function notifyThemeChange() {
   notifyListeners();
 }
 
-export function setStoredPreference(preference: ThemePreference) {
-  try {
-    if (preference === "system") {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } else {
-      window.localStorage.setItem(STORAGE_KEY, preference);
-    }
-  } catch {
-    /* ignore */
-  }
-}
-
-/** Runs before React hydrates so the first paint matches system or saved preference. */
-export const themeInitScript = `(function(){try{var k='${STORAGE_KEY}';var p=localStorage.getItem(k);var explicit=p==='light'||p==='dark';var d=p==='dark'||(!explicit&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);}catch(e){}})();`;
+/** Runs before React hydrates so the first paint matches the system color scheme. */
+export const themeInitScript = `(function(){try{var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);}catch(e){}})();`;

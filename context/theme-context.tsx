@@ -2,10 +2,8 @@
 
 import React, { createContext, useContext, useSyncExternalStore } from "react";
 import {
-  applyTheme,
-  notifyThemeChange,
-  readThemeFromDocument,
-  setStoredPreference,
+  getTheme,
+  setSessionTheme,
   subscribeTheme,
   type Theme,
 } from "@/lib/theme";
@@ -26,15 +24,12 @@ export default function ThemeContextProvider({
 }: ThemeContextProviderProps) {
   const theme = useSyncExternalStore<Theme>(
     subscribeTheme,
-    readThemeFromDocument,
+    getTheme,
     (): Theme => "light"
   );
 
   const toggleTheme = () => {
-    const next: Theme = theme === "light" ? "dark" : "light";
-    setStoredPreference(next);
-    applyTheme(next);
-    notifyThemeChange();
+    setSessionTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
