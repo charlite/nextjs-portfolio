@@ -315,7 +315,7 @@ export const certificatesData = [
   {
     name: "Open Source Fundations by IBM",
     logo: "/images/icon-ibm.png",
-    image: "/images/certificate_20.png",
+    image: "/images/certificate_8.png",
     url: "https://www.credly.com/badges/e26f8249-1b45-4ca1-8585-598442f259ce/charlie-rios",
   },
   {
@@ -385,12 +385,6 @@ export const certificatesData = [
     url: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI4OTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl80OTkyMTk5XzE3MTE2MzM4NzIucG5nIiwidXNlcm5hbWUiOiJDaGFybGllIFJpb3MgUHVqYWRvIn0%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F3111%2FBlockchain-Certification-Training%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1362757859895180075&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVN8suTsnI8MjK8UyyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOb3IYBBAAAA",
   },
   {
-    name: "Introduction to MERN Stack",
-    logo: "/images/icon-simplelearn.jpeg",
-    image: "/images/certificate_8.png",
-    url: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMzM3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNDk5MzM2NF8xNzExNjU1MjUxLnBuZyIsInVzZXJuYW1lIjoiQ2hhcmxpZSBSaW9zIFB1amFkbyJ9&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6129%2FIntroduction-to-MERN-Stack%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1362757859895180075&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVd09xdqkqMc%2FK8UyyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAGRdloVBAAAA",
-  },
-  {
     name: "Network Defense Certificate",
     logo: "/images/icon-eccouncil.png",
     image: "/images/certificate_13.png",
@@ -405,7 +399,7 @@ export const certificatesData = [
   {
     name: "Advanced Web Analytics",
     logo: "/images/icon-simplelearn.jpeg",
-    image: "/images/certificate_19.png",
+    image: "/images/certificate_15.png",
     url: "https://simpli-web.app.link/e/ui9AtiImqIb",
   },
   {
