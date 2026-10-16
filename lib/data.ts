@@ -301,26 +301,44 @@ export const hostingProviders = [
 
 export const certificatesData = [
   {
-    name: "Smart Contracts with Applications in FSC",
+    name: "Consolidating Risk Visibility to Build Business Resilience",
+    logo: "/images/icon-it-forums.png",
+    image: "/images/certificate_18.png",
+    url: "https://www.itcpeacademy.org/certificate/67dc6c610ff63992fc0296cc/user/686f93608cbe8e744805118d",
+  },
+  {
+    name: "Mastering Web3: DeFi, CBDCs & NFTs",
     logo: "/images/icon-university-nicosia_grey.png",
+    image: "/images/certificate_17.png",
+    url: "https://www.linkedin.com/in/charlie-rios/overlay/Certifications/1676071642/treasury?profileId=ACoAACSxPW8BiSbXrvOKN8pEP5dti-or4mgIDD0",
+  },
+  {
+    name: "Open Source Fundations by IBM",
+    logo: "/images/icon-ibm.png",
+    image: "/images/certificate_20.png",
+    url: "https://www.credly.com/badges/e26f8249-1b45-4ca1-8585-598442f259ce/charlie-rios",
+  },
+  {
+    name: "Smart Contracts with Applications in FSC",
+    logo: "/images/icon-trust-food.png",
     image: "/images/certificate_9.png",
     url: "https://trust-food.ubitech.eu/certificates/fc623567638f4d20a0b64a1f603591c2",
   },
   {
     name: "Advanced Blockchain Skills Certificate",
-    logo: "/images/icon-university-nicosia_grey.png",
+    logo: "/images/icon-trust-food.png",
     image: "/images/certificate_10.png",
     url: "https://trust-food.ubitech.eu/certificates/ca861786c35e9605e0ae63c2fc3cadc6",
   },
   {
     name: "MiCA Regulation and CBDC's Certificate",
-    logo: "/images/icon-university-nicosia_grey.png",
+    logo: "/images/icon-trust-food.png",
     image: "/images/certificate_11.png",
     url: "https://trust-food.ubitech.eu/certificates/350a6387a1989ee629d3405a6fa27f31",
   },
   {
     name: "Ethical & Governance in Blockchain FGC's",
-    logo: "/images/icon-university-nicosia_grey.png",
+    logo: "/images/icon-trust-food.png",
     image: "/images/certificate_12.png",
     url: "https://trust-food.ubitech.eu/certificates/6be0ca94ae66f1d034e8ea433cf63a32/",
   },
@@ -387,7 +405,7 @@ export const certificatesData = [
   {
     name: "Advanced Web Analytics",
     logo: "/images/icon-simplelearn.jpeg",
-    image: "/images/certificate_16.png",
+    image: "/images/certificate_19.png",
     url: "https://simpli-web.app.link/e/ui9AtiImqIb",
   },
   {
